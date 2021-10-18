@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Test Module</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div id="main">
+		<h2>class Window(int width, int height, const char *title); // initializes the window.</h2>
+		<h4>void setIcon(const char *path); // changes the window icon.</h4>
+		<h4>void TargetFPS(int fps); // sets a max fps.</h4>
+		<h4>bool isClosing(); // tells you if the window is closing or not.</h4>
+
+		<h2>class Renderer;</h2>
+		<h4>void InitRenderer(); // starts the renderer, put it in loop.</h4>
+		<h4>void disableRenderer(); // ends the renderer, put it after InitRenderer().</h4>
+		<h4>void clearBG(Color color); // clears the background with a color.</h4>
+		<h4>void renderFPS(int x, int y); // displays the game fps.</h4>
+
+	</div>
+	<div id="sprite">
+		<h2>class Sprite(float xPos, float yPos, float width,float height); // initializes the sprite.</h2>
+		<h4>void InitTexture(const char *path); // creates a texture for sprite.</h4>
+		<h4>void render(Color color); // renders the sprite with specified color.</h4>
+		<h4>void unload(); // unloads the initialized texture from memory. put it after the loop.</h4>
+		<h4>void updateTexture(); //updates the texture size to fit the collider.</h4>
+		<h4>float getX(); // gets the x value of the sprite</h4>
+		<h4>float getY(); // gets the y value of the sprite</h4>
+		<h4>float setX(float x); // sets the x value of the sprite</h4>
+		<h4>float setY(float y); // sets the y value of the sprite</h4>
+	</div>
+	<div id="events">
+		<h2>class Event; // initializes the Event Manager.</h2>
+		<h4>bool KeyDown(int key); // detects if key is down.</h4>
+		<h4>bool KeyPressed(int key); // detects if key is pressed.</h4>
+		<h4>bool KeyReleased(int key); // detects if key is released.</h4>
+		<h4>bool KeyUp(int key); // detects if key is up.</h4>
+	</div>
+</body>
+</html>
